@@ -37,8 +37,8 @@ public class FlorEntityDTO {
         return nombreFlor;
     }
 
-    public void setNomFlor(String nomFlor) {
-        this.nombreFlor = nomFlor;
+    public void setNombreFlor(String nomFlor) {
+        this.nombreFlor = nombreFlor;
     }
 
     public String getPaisFlor() {
@@ -61,13 +61,13 @@ public class FlorEntityDTO {
         FlorEntityDTO florEntityDTO = new FlorEntityDTO();
 
         florEntityDTO.setPk_FlorID(flor.getPk_FlorID());
-        florEntityDTO.setNomFlor(flor.getNombreFlor());
+        florEntityDTO.setNombreFlor(flor.getNombreFlor());
         florEntityDTO.setPaisFlor(flor.getPaisFlor());
 
         if (paises.contains(flor.getPaisFlor())){
             florEntityDTO.setTipusFlor("UE");
         } else {
-            florEntityDTO.setTipusFlor("Fora UE");
+            florEntityDTO.setTipusFlor("Fuera de la UE");
         }
 
         return florEntityDTO;
